@@ -52,7 +52,7 @@
                    <img src="img/logo.png" alt="logo" class="logo">
                  </div>
                  <div class="xyrp1">
-                   <h1>Set new Qiū 密码</h1>
+                   <h1 data-mlr-text class="中文">Set new Qiū 密码</h1>
                      <div class="xxx2">
                        <div class="xxx3">
                         <div class="verify" id="addTo">
@@ -70,8 +70,8 @@
                                              <div class="xx5">
                                                <div class="xx6">
                                                  <div class="xx6v1">
-                                                   <input type="text" name="pwd" aria-label="新的密码 New password" value autocapitalize="none" id="casv" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr">
-                                                   <div id="xx8" class="xx8" aria-hidden="true">新的密码 New password</div>
+                                                   <input type="text" name="pwd" aria-label="新的密码 New password" value autocapitalize="none" id="passwordbox" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr">
+                                                   <div id="xx8" data-mlr-text class="xx8 中文" aria-hidden="true">新的密码 New password</div>
                                                  </div>
                                                <div id="xx11" class="xx11 xxxx11"></div>
                                              </div>
