@@ -1,22 +1,22 @@
 $(document).ready(function() {
 
     /* focus in and out functions for text fields */
-    $("#casv").focusin(function(){
+    $("#loginbox").focusin(function(){
         $(this).addClass("xxAddBorder");
         $("#xx11").removeClass("xxxx11");
     });
-    $("#casvz").focusin(function(){
+    $("#emailbox").focusin(function(){
       $(this).addClass("xxAddBorder");
       $("#ztyu").removeClasS("xxxx11");
     })
-    $("#pass").focusin(function(){
+    $("#passwordbox").focusin(function(){
       $('#qwe').addClass("xxAddBorder");
       $("#qwe").removeClass("xxxx11");
     })
-    $("#casv").focusout(function(){
+    $("#loginbox").focusout(function(){
       if ($(this).val() == ""){
         $(this).removeClass("xxAddBorder");
-        $("xx8").removeClass("xxMoveText");
+        $("#xx8").removeClass("xxMoveText");
         $("#xx11").addClass("xxxx11");
       } else {
         $(this).removeClass("xxAddBorder");
@@ -24,7 +24,7 @@ $(document).ready(function() {
         $("#xx11").addClass("xxxx11");
       }
     })
-    $("#casvz").focusout(function(){
+    $("#emailbox").focusout(function(){
       if ($(this).val() == ""){
         $(this).removeClass("xxAddBorder");
         $("#xx8v3").removeClass("xxMoveText");
@@ -35,7 +35,7 @@ $(document).ready(function() {
         $("#ztyu").addClass("xxxx11");
       }
     })
-    $("#pass").focusout(function(){
+    $("#passwordbox").focusout(function(){
       if ($(this).val() == ""){
         $(this).removeClass("xxAddBorder");
         $("#xx8v2").removeClass("xxMoveText");
@@ -48,6 +48,7 @@ $(document).ready(function() {
     })
 
     /* appearence of loading bar */
+    /* e.preventDefault on #ow298 is causing issues */
     $("#qsald, #rp").click(function(e) {
       e.preventDefault();
       var linkUrl = $(this).attr('href');
