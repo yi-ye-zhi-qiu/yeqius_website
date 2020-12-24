@@ -27,32 +27,39 @@
   }
 }
 
+.ENG {
+  font-family: serif !important;
+}
+.中文{
+  font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong !important;
+}
 
+h1 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+}
 
 .xx {
-/*  background-image: url("img/morningsky.jpg") !important; */
+  /** background-image: url("../img/morningsky.jpg") !important; **/
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 body {
-  overflow: hidden;
+  overflow: visible;
   display: block;
   direction: ltr;
-  font-family: 'Roboto',sans-serif;
-  font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong, serif;
   font-size: 12px;
   line-height: 1.4286;
   margin: 0;
   padding: 0;
 }
-div {
-  display: block;
-}
-section{
-  display: block;
-}
+
 input:-webkit-autofill {
   -webkit-box-shadow:0 0 0 50px #C8E6C9 inset;
 }
@@ -204,14 +211,14 @@ input:-webkit-autofill {
 
 .yy1{
   margin: 16px 0;
-    outline: none;
+  outline: none;
 }
 .ab{
-    height: 24px;
-    margin: 0 auto;
-    overflow: visible;
-    position: relative;
-    width: 75px;
+  height: 24px;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+  width: 75px;
 }
 .logo{
   height: 100px;
@@ -224,7 +231,6 @@ input:-webkit-autofill {
     color: #202124;
     padding-bottom: 0;
     padding-top: 40px;
-    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif,微軟正黑體;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.3333;
@@ -233,16 +239,6 @@ input:-webkit-autofill {
 }
 
 
-h1{
-  font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
-    font-size: 2em;
-    font-weight: bold;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    margin: 0;
-    text-align: center;
-}
 .xy2{
   color: #202124;
     font-size: 16px;
@@ -257,7 +253,7 @@ h1{
 }
 
 .vmnlimit{
-  opacity: 0;
+  opacity: 1;
 }
 /*on signup success*/
 .vmn{
@@ -371,7 +367,7 @@ h1{
   background-color: transparent;
   border: none;
   display: block;
-  font: 400 16px'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
+  font: 400 16px;
   line-height: 24px;
   min-width: 0%;
   outline: none;
@@ -383,7 +379,6 @@ h1{
   }
 .tyu123 a{
   font-size: 16px;
-  font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
   text-decoration: none;
   color: black;
 }
@@ -411,7 +406,7 @@ h1{
 .xxMoveText{
   transform: scale(.75) translateY(-39px);
 }
-.xx8{
+.xx8, .resetsent{
     background: #fff;
     bottom: 17px;
     -webkit-box-sizing: border-box;
@@ -431,11 +426,13 @@ h1{
     width: auto;
     flex-grow: 2;
     z-index: 1;
-    font: 450 16px   'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
+    font: 450 16px;
     transform-origin: bottom left;
     pointer-events: none;
     position: absolute;
 }
+
+
 .xxxx11{
   border: 1px solid #dadce0;
   border-radius: 4px;
@@ -452,6 +449,7 @@ h1{
   width: 100%;
   cursor: pointer;
 }
+
 .xx11:before{
   content: "";
   position: absolute;
@@ -525,7 +523,7 @@ h1{
   white-space: nowrap;
   width: auto;
   z-index: 1;
-  font: 400 16px 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
+  font: 400 16px;
   pointer-events: none;
   position: absolute;
 }
@@ -742,7 +740,7 @@ button {
     background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
     box-sizing: border-box;
     margin: 0em;
-    font: 400 13.3333px 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
+    font: 400 13.3333px;
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
@@ -822,7 +820,6 @@ button {
 
     min-width: 88px;
     padding: 0 24px 0 24px;
-    font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
     font-size: .875rem;
     font-weight: 500;
     letter-spacing: .0107142857em;
@@ -844,7 +841,6 @@ button {
     will-change: transform,opacity;
 
     -webkit-font-smoothing: antialiased;
-    font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
     font-family: var(--mdc-typography-button-font-family,var(--mdc-typography-font-family,'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong));
     font-size: .875rem;
     font-size: var(--mdc-typography-button-font-size,0.875rem);
@@ -941,7 +937,6 @@ button {
       margin-top: -15px;
       -webkit-border-radius: 4px;
       border-radius: 4px;
-      font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
       font-size: inherit;
       letter-spacing: .25px;
       text-transform: none;
@@ -985,7 +980,6 @@ button {
   text-align: right;
   margin-top: -10px;
   border-radius: 4px;
-  font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
   font-size: inherit;
   letter-spacing: 1px;
   text-transform: none;
@@ -1003,7 +997,6 @@ button {
       position: relative;
       margin: 16px;
       text-align: left;
-      font-family: 'FZZFangSong-Z02', 'FZZFangSong-Z02S', STFangsong, FangSong;
       font-size: inherit;
       letter-spacing: .25px;
       text-transform: none;
@@ -1022,38 +1015,4 @@ button {
 
 .qsald a{
   text-decoration: none;
-}
-
-@media (min-width: 601px) {
-  .RwBngc {
-      height: 16.8px;
-      padding: 24px 0 0;
-      position: absolute;
-      width: 100%;
-  }
-  .u7land {
-    margin: 0;
-  }
-}
-@media (min-width: 450px){
-  .RwBngc {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-.u7land {
-    height: 16.8px;
-    margin: 8px 0;
-}
-.RwBngc {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    font-size: 12px;
-    line-height: 1.4;
-    padding: 0 24px 14px;
 }
