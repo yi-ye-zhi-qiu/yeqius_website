@@ -8,16 +8,17 @@
     <meta charset="utf-8">
     <meta name="description" content="Ye Qiu Liam Nathan Isaacs">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>Reset 秋 pwd 重置密码</title>
+    <title>Reset your qiu.com password</title>
     <style>
-      <?php include "style.css" ?>
+      <?php include "css/style.css" ?>
     </style>
  </head>
 
+
+
 <body>
-<script src="app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="jquery.js"></script>
+<script src="js/jquery.js"></script>
  <div class="xx">
    <div class="xyrp">
       <div class="vcmvz" aria-hidden="true">
@@ -38,14 +39,14 @@
             <img src="img/logo.png" alt="logo" class="logo">
           </div>
           <div class="xyrp1">
-            <h1>Reset your Qiū 密码</h1>
+            <h1 data-mlr-text class="中文">重新密码</h1>
               <div class="xxx2">
                 <div class="xxx3">
                  <div class="verify" id="addTo">
                   <div class="xxx4">
                     <?php
                         if (!isset($_SESSION['id'])) {
-                            echo '
+                    ?>
                               <form action="includes/reset-request.inc.php" method="post" id="login-form">
                                 <section class="yy1">
                                 <header class="yy2" aria-hidden="true"></header>
@@ -54,11 +55,11 @@
                                     <div class="xx4">
                                       <div class="xx5">
                                         <div class="xx6">
-                                          <div class="xx6v1">
-                                            <input type="text" name="email" aria-label="输入邮件 Enter e-mail" value autocapitalize="none" id="casv" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr">
-                                            <div id="xx8" class="xx8" aria-hidden="true">输入邮件 Enter e-mail</div>
-                                          </div>
-                                        <div id="xx11" class="xx11 xxxx11"></div>
+                                            <div class="xx6v1">
+                                              <input type="text" name="email" aria-label="输入邮件 Enter e-mail" value autocapitalize="none" id="passwordbox" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr">
+                                              <div id="xx8" data-mlr-text class="xx8 中文" aria-hidden="true">输入邮件 Enter e-mail</div>
+                                            </div>
+                                          <div id="xx11" class="xx11 xxxx11"></div>
                                       </div>
                                     </div>
                                   </div>
@@ -71,7 +72,7 @@
                             <div class="zxx8 zxxxxx6" id="identifierNext">
                               <div class="dazcv zxxxxx6">
                                 <div class="zx8 zxxxxx6" role="button" id="ow298">
-                                  <button type="submit" name="reset-request-submit" class="zx5 zxxxxx6" id="submit">Get Reset Link / 获取验证码 </button>
+                                  <button type="submit" data-mlr-text name="reset-request-submit" class="中文 zx5 zxxxxx6" id="submit">Get Reset Link / 获取验证码 </button>
                                 </div>
                               </div>
                             </div>
@@ -119,15 +120,22 @@
      </div>
     </div>
   <div class="qq" aria-hidden="true"></div>
-  </div>';}
-  ?>
+  </div>
 </body>
-
-
-
+<?php
+} if ($_GET["error"] == "emptyemail") { ?>
+      <script type="text/javascript">
+        const input = document.querySelector(".xx7");
+        input.focus();
+        input.classList.add("shake");
+        const xzx = document.querySelector("#casv");
+        xzx.classList.add("xxAddBorder");
+        const xyz = document.querySelector("#xx11")
+        xyz.classList.remove("xxxx11");
+      </script>
 
 <?php
-if (isset($_SESSION['id'])) {
+} else if (isset($_SESSION['id'])) {
  echo '
     <form action="includes/logout.inc.php" method="post">
         <button type="submit" name="logout-submit">退出</button>
