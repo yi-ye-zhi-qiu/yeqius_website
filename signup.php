@@ -10,13 +10,11 @@
     <meta name="description" content="Ye Qiu Liam Nathan Isaacs">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Join 秋</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  </head>
 
 <body>
-<script src="app.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="jquery.js"></script>
  <div class="xx">
    <div class="xy">
       <div class="vcmvz" aria-hidden="true">
@@ -37,13 +35,13 @@
             <img src="img/logo.png" alt="logo" class="logo">
           </div>
           <div class="xy1">
-            <h1>Join Qiū</h1>
+            <h1 class="中文" data-mlr-text id="add_block_here">注册</h1>
               <div class="xxx2">
                 <div class="xxx3">
                   <div class="xxx4">
                     <?php
-                        if (!isset($_SESSION['id'])) {
-                            echo '<form action="includes/signup.inc.php" method="post" id="login-form">
+                        if (!isset($_SESSION['id'])) { ?>
+                            <form action="includes/signup.inc.php" method="post" id="login-form">
                                     <section class="yy1">
                                       <header class="yy2" aria-hidden="true"></header>
                                       <div class="xx2">
@@ -51,16 +49,16 @@
                                           <div class="xx4">
                                             <div class="xx5">
                                               <div class="xx6">
-                                                <div class="xx6v1">';
+                                                <div class="xx6v1">
+                                                <?php
                                                 if (!empty($_GET["uid"])) {
-                                                  echo '<input type="text" name="uid" aria-label="用户名" value autocapitalize="none" id="casv" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" value="'.$_GET["uid"].'" id="casv">';
+                                                  echo '<input type="text" name="uid" aria-label="用户名" value autocapitalize="none" id="loginbox" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" value="'.$_GET["uid"].'" id="casv">';
                                                 }
                                                 else {
-                                                  echo '<input type="text" name="uid" aria-label="用户名" value autocapitalize="none" id="casv" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" id="casv">';
+                                                  echo '<input type="text" name="uid" aria-label="用户名" value autocapitalize="none" id="loginbox" class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" id="casv">';
                                                 }
-                                                echo
-                                                  '
-                                                  <div id="xx8" class="xx8" aria-hidden="true">Username / 用户名</div>
+                                                ?>
+                                                <div id="xx8" data-mlr-text class="xx8 中文" aria-hidden="true">用户名</div>
                                                 </div>
                                                 <div id="xx11" class="xx11 xxxx11"></div>
                                               </div>
@@ -71,16 +69,16 @@
                                          <div class="xx4">
                                           <div class="xx5">
                                             <div class="xx6">
-                                              <div class="xx6v1">';
+                                              <div class="xx6v1">
+                                              <?php
                                               if (!empty($_GET["mail"])) {
-                                                echo '<input type="text" name="mail" aria-label="e-mail" value autocapitalize="none"  class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" value="'.$_GET["mail"].'" id="casvz">';
+                                                echo '<input type="text" name="mail" aria-label="e-mail" value autocapitalize="none"  class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" value="'.$_GET["mail"].'" id="emailbox">';
                                               }
                                               else {
-                                                echo '<input type="text" name="mail" aria-label="e-mail" value autocapitalize="none"  class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" id="casvz">';
+                                                echo '<input type="text" name="mail" aria-label="e-mail" value autocapitalize="none"  class="xx7" spellcheck="false" tabindex="0" initial-dir="ltr" dir="ltr" id="emailbox">';
                                               }
-                                              echo
-                                                '
-                                                <div id="xx8v3" class="xx8" aria-hidden="true">e-mail / 邮件</div>
+                                              ?>
+                                              <div id="xx8v3" data-mlr-text class="xx8 中文" aria-hidden="true">邮件</div>
                                               </div>
                                               <div class="xx11 xxxx11" id="ztyu"></div>
                                               </div>
@@ -92,8 +90,9 @@
                                           <div class="xx5">
                                             <div class="xx6">
                                               <div class="xx6v1">
-                                                <input type="password" name="pwd" id="pass" spellcheck="false" tabindex="0" aria-label="密码" dir="ltr" autocapitalize="off" class="xx7">
-                                                <div id="xx8v2" class="xx8" aria-hidden="true">Password / 密码</div>
+                                                <input type="password" name="pwd" id="passwordbox" spellcheck="false" tabindex="0" aria-label="密码" dir="ltr" autocapitalize="off" class="xx7">
+                                                <span id="togglePassword" class="fa fa-eye fa-2x"></span>
+                                                <div id="xx8v2" data-mlr-text class="xx8 中文" aria-hidden="true">密码</div>
                                               </div>
                                               <div class="xx11 xxxx11" id="qwe"></div>
                                               </div>
@@ -129,6 +128,7 @@
                                     </section>
                                   </form>
                             </div>
+                            <select id="lang-chooser"></select>
                           </div>
                         </div>
                       </div>
@@ -142,8 +142,9 @@
     </div>
   <div class="qq" aria-hidden="true"></div>
   </div>
-</body>';}
-
+</body>
+<?php
+}
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyuid") {
               echo        '<script type="text/javascript">',
@@ -184,3 +185,8 @@
           }
 
           ?>
+          <script src="js/url_error_handler.js"></script>
+          <script src="js/toggle_password.js"></script>
+          <script src="js/lang_chooser.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script src="js/toggle_fields_jquery.js"></script>
