@@ -9,7 +9,9 @@
     if (empty($password)) {
       header("Location: ../create-new-password.php?error=emptypass&selector=".$selector."&validator=".$validator);
     }
-
+    if (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/", $password)){
+      header("Location: ../create-new-password.php?error=invalidpassword&selector=".$selector."&validator=".$validator);
+    }
     $currentDate = date("U");
 
     require 'dbh.inc.php';
@@ -38,7 +40,7 @@
           exit();
         } elseif ($tokenCheck === true) { //use elseif just incase $token is equal to smth crazy
 
-          $tokenEmail = $row['pwdResetemail'];
+          $tokenEmail = $row['pwdResetEmail'];
 
           $sql = "SELECT * FROM users WHERE emailUsers=?;";
 
@@ -74,7 +76,7 @@
                 } else {
                   mysqli_stmt_bind_param($stmt, "s", $userEmail); //what ? will be replaced with
                   mysqli_stmt_execute($stmt);
-                  header("Location: ../index.php?newpwd=passwordupdated");
+                  header("Location: ../index.php?action=success&in=np&person=".$tokenEmail);
                 }
 
               }
