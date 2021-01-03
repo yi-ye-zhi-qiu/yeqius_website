@@ -10,7 +10,7 @@ if(isset($_POST['post_button'])){
     $users = "SELECT * FROM users";
     $r = mysqli_query($conn, $users);
     if (mysqli_num_rows($r) > 0) {
-      //finally using OOP PHP for fucking christ's sake!
+      //finally using OOP PHP
       $stmt = $conn->prepare("SELECT * FROM users WHERE idUsers= ? LIMIT 1;");
       $stmt->bind_param('s', $id);
       $stmt->execute();
