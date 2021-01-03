@@ -1,5 +1,5 @@
 <?php
-
+  //new password creation backend
   if (isset($_POST["create-password-submit"])) {
 
     $selector = $_POST["selector"];
